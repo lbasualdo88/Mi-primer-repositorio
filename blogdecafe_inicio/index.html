@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogdeCafe</title>
+    <meta name="description" content="Pagina web de blog de cafe">
+
+    <!--Prefetch--> <!--Carga la siguiente pagina que se supone q el usuario iria ej(entre cursos, contacto y nosotros la mas vista es cursos)-->
+    <link rel=prefetch href="cursos.html" as="document">
+
+    <!--Preload--> <!--carga mas rapidos las paginas y o documento-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" 
+    crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+<!--
+    <link rel=preload href="img/blog1.jpg" as="image">
+    <link rel=preload href="img/blog2.jpg" as="image">
+    <link rel=preload href="img/blog3.jpg" as="image">
+--> <!--No es necesario colocar el PRELOAD, si es que se le pone para que elija entre un WEBP o un JPG-->
+
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafe</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de cafe con consejos y cursos</h2>
+            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+            
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture><!--Elige cual cargar primero, siempre el mas chico (webp) si no, carga el JPG-->
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp"><!--El WEBP es mas chico que el JPG, si el servidor lo soporta carga el webp, si no el jpg-->
+                        <img src="img/blog1.jpg" alt="imagen blog" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Tipos de Granos de Cafe</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deleniti, iure autem eum quaerat 
+                       aliquam mollitia, sunt quia suscipit nihil ullam quae dignissimos architecto voluptatibus. 
+                       Eaque, modi. Nemo, voluptatibus fugiat!</p>
+                       <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture><!--Elige cual cargar primero, siempre el mas chico (webp) si no, carga el JPG-->
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp"><!--El WEBP es mas chico que el JPG, si el servidor lo soporta carga el webp, si no el jpg-->
+                        <img src="img/blog2.jpg" alt="imagen blog" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Tres Deliciosas Resetas de Cafe</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deleniti, iure autem eum quaerat 
+                       aliquam mollitia, sunt quia suscipit nihil ullam quae dignissimos architecto voluptatibus. 
+                       Eaque, modi. Nemo, voluptatibus fugiat!</p>
+                       <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture><!--Elige cual cargar primero, siempre el mas chico (webp) si no, carga el JPG-->
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp"><!--El WEBP es mas chico que el JPG, si el servidor lo soporta carga el webp, si no el jpg-->
+                        <img src="img/blog3.jpg" alt="imagen blog" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Beneficios del Cafe</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deleniti, iure autem eum quaerat 
+                       aliquam mollitia, sunt quia suscipit nihil ullam quae dignissimos architecto voluptatibus. 
+                       Eaque, modi. Nemo, voluptatibus fugiat!</p>
+                       <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+        </main>
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Tecnicas de Extraccion de Cafe</h4>
+                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                    <a href="entrada.html" class="boton boton--secundario">Mas Informacion</a>
+                </li>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Cuatro Recetas de Cafe Para Principiantes</h4>
+                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                    <a href="entrada.html" class="boton boton--secundario">Mas Informacion</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafe</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="js/modernizr.js" ></script> <!--Ayuda a cargar los webp desde el html-->
+</body>
+</html>
